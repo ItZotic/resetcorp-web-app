@@ -161,11 +161,11 @@ const emailService = {
     try {
       const { subject, html } = emailTemplates.contactForm(contactData);
       const mailOptions = {
-        from: process.env.EMAIL_FROM || '22-03351@g.batstate-u.edu.ph',
-        to: ['info@resetcorp.com'],
-        subject: subject,
-        html: html
-      };
+  from: process.env.EMAIL_FROM || '22-03351@g.batstate-u.edu.ph',
+  to: [user.email, process.env.ADMIN_EMAIL || 'admin@resetcorp.com'],
+  subject: subject,
+  html: html
+};
       console.log('[DEBUG] Sending contact email with options:', mailOptions);
       const transporter = await createTransporter();
       const result = await transporter.sendMail(mailOptions);
@@ -183,7 +183,7 @@ const emailService = {
       const { subject, html } = emailTemplates.orderConfirmation(order, user);
       const mailOptions = {
         from: process.env.EMAIL_FROM || '22-03351@g.batstate-u.edu.ph',
-        to: user.email,
+        to: [user.email, process.env.ADMIN_EMAIL || 'admin@resetcorp.com'],
         subject: subject,
         html: html
       };

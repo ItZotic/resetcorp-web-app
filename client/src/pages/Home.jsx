@@ -772,7 +772,6 @@ const Home = () => {
         </div>
         <div className="services-cta">
           <button className="contact-btn" onClick={() => setShowContact(true)}>Contact Us</button>
-          <button className="quote-btn" onClick={() => setShowQuote(true)}>Request a Quote</button>
           </div>
         </div>
       </section>
@@ -981,41 +980,7 @@ const Home = () => {
           gap: '2.5rem',
           alignItems: 'start'
         }}>
-          {/* Request a Quote */}
-          <div>
-            <div className="footer-section-heading" style={{ color: '#666', fontSize: '0.95rem', marginBottom: '8px', fontWeight: 500 }}>Get a custom solution</div>
-            <div className="footer-section-title" style={{ fontWeight: 700, fontSize: '2.2rem', marginBottom: '1.5rem', lineHeight: 1.2, color: '#2c3e50' }}>Request a Quote</div>
-            <button 
-              type="button" 
-              onClick={() => setShowQuote(true)} 
-              style={{
-                background: '#28a745',
-                color: '#fff',
-                border: 'none',
-                borderRadius: '12px',
-                padding: '1rem 2.5rem',
-                fontWeight: 600,
-                fontSize: '1.1rem',
-                cursor: 'pointer',
-                transition: 'all 0.3s ease',
-                boxShadow: '0 4px 15px rgba(40,167,69,0.3)',
-                fontFamily: 'Poppins, sans-serif'
-              }}
-              onMouseEnter={(e) => {
-                e.target.style.background = '#218838';
-                e.target.style.transform = 'translateY(-2px)';
-                e.target.style.boxShadow = '0 6px 20px rgba(40,167,69,0.4)';
-              }}
-              onMouseLeave={(e) => {
-                e.target.style.background = '#28a745';
-                e.target.style.transform = 'translateY(0)';
-                e.target.style.boxShadow = '0 4px 15px rgba(40,167,69,0.3)';
-              }}
-            >
-              Request Quote
-            </button>
-          </div>
-
+          
           {/* Company */}
           <div>
             <div className="footer-section-title" style={{ fontWeight: 700, fontSize: '1.2rem', marginBottom: 12, color: '#2c3e50' }}>Company</div>

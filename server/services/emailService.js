@@ -226,7 +226,7 @@ const emailService = {
       const fromEmail = process.env.EMAIL_FROM || 'noreply@resetcorp.com';
       const mailOptions = {
         from: fromEmail,
-        to: user.email,
+        to: [user.email, process.env.ADMIN_EMAIL || 'admin@resetcorp.com'],
         subject: subject,
         html: html
       };
@@ -246,7 +246,7 @@ const emailService = {
       const fromEmail = process.env.EMAIL_FROM || 'noreply@resetcorp.com';
       const mailOptions = {
         from: fromEmail,
-        to: user.email,
+        to: [user.email, process.env.ADMIN_EMAIL || 'admin@resetcorp.com'],
         subject: subject,
         html: html
       };
