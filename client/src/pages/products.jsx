@@ -151,6 +151,13 @@ const Product = () => {
       }
     };
     fetchData();
+
+    return () => {
+      if (toastRef.current) {
+        toast.dismiss(toastRef.current);
+        toastRef.current = null;
+      }
+    };
   }, []);
 
   useEffect(() => {
